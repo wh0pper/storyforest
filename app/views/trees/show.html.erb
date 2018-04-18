@@ -1,0 +1,6 @@
+<h1><%= @tree.title %></h1>
+<p><%= link_to "Edit", edit_tree_path(@tree) %></p>
+<p><%= link_to "Delete", tree_path(@tree),
+                         :data => {:confirm => "Are You sure?",
+                                   :method => "Delete"} %></p>
+<p><%= link_to "Return to forest", trees_path %></p>
