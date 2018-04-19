@@ -5,6 +5,7 @@ class TreesController < ApplicationController
   end
 
   def index
+    @sorted_trees = Tree.sorted
     @trees = Tree.all
     render :index
   end

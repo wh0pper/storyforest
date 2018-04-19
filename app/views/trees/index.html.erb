@@ -1,7 +1,7 @@
 <h1>StoryForest</h1>
 <ul>
-  <% @trees.each do |tree| %>
-  <li><%= link_to tree.title, tree_path(tree) %></li>
+  <% @sorted_trees.each do |tree| %>
+  <li><%= link_to [tree.title, tree.points], tree_path(tree) %></li>
   <% end %>
 </ul>
 
