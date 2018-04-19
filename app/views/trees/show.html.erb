@@ -1,6 +1,27 @@
 <h1><%= @tree.title %></h1>
-<p><%= link_to "Edit", edit_tree_path(@tree) %></p>
+<%if @tree.branches.any?%>
+  <p><%= link_to "Edit Tree", edit_tree_path(@tree) %> | Tree has branches (can't delete tree)</p>
+<%else%>
+
 <p><%= link_to "Delete", tree_path(@tree),
                          :data => {:confirm => "Are You sure?",
                                    :method => "Delete"} %></p>
+                                   <%end%>
+<% if @tree.branches.any? %>
+  <h4>Branches</h4>
+    <% @tree.branches.each do |branch| %>
+      <p><%= branch.body %></p>
+      <%= link_to "Edit Branch", edit_tree_branch_path(@tree, branch) %> |
+      <%= link_to "Delete Branch", tree_branch_path(@tree, branch),
+                                        :data => {:confirm => "Are you sure?",
+                                                      :method => "Delete"} %>
+    <%end%>
+<% else %>
+<% end %>
+
+<hr>
+
+<p><%= link_to "Add a branch", new_tree_branch_path(@tree) %></p>
+
+
 <p><%= link_to "Return to forest", trees_path %></p>

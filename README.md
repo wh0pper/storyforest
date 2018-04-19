@@ -1,9 +1,9 @@
 # StoryForest
 ### By Andrew Parker Peterson
 
-StoryForest is a simple, collaborative storytelling web-app built in Ruby on Rails.
+StoryForest is a collaborative storytelling web-app built in Ruby on Rails.
 
-Users can create StoryTrees which have a title and a trunk. The trunk is the opening paragraph (up to 700 characters). Once a StoryTree is created, users can choose to either make a new branch or add to the current branch (700 character max). In other words, a single StoryTree can have many possible splits at any point along the way allowing for one story to have many outcomes and resulting in a psuedo choose-your-own-adventure for readers.
+Users can create StoryTrees which have a title and a trunk. The trunk is the opening paragraph (up to 700 characters). Once a StoryTree is created, users can choose to either make a new branch or add to the current branch (700 character max). Once a branch has been added to a trunk the trunk cannot be deleted or edited. Same goes for branches. If a branch has a sub-branch it cannot be edited nor deleted. 
 
 This README would normally document whatever steps are necessary to get the
 application up and running but I haven't gotten that far yet.

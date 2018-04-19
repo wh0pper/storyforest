@@ -1,7 +1,7 @@
-<%= render "layouts/errors", :object => @list %>
+<%= render "layouts/errors", :object => @tree %>
 
-<%= form_for @list do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<%= form_for @tree do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
   <%= f.submit %>
 <% end %>

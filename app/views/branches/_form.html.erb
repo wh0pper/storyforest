@@ -1,0 +1,7 @@
+<%= render('layouts/errors', :object => @branch) %>
+
+<%= form_for [@tree, @branch] do |f| %>
+  <%= f.label :body %>
+  <%= f.text_area :body %>
+  <p><%= f.submit %></p>
+<% end %>

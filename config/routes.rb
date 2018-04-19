@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  resources :trees
+  root :to => 'trees#index'
+  resources :trees do
+    resources :branches
+  end
+
+
 end
