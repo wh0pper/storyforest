@@ -1,4 +1,6 @@
 class TreesController < ApplicationController
+  before_action :authorize, only: [:new,:create,:destroy,:edit,:private]
+
   def edit
     @tree = Tree.find(params[:id])
     render :edit
