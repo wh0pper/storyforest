@@ -2,10 +2,10 @@
 <ul>
   <% @sorted_trees.each do |tree| %>
   <li><%= link_to "#{tree.title} #{tree.points}", tree_path(tree) %></li>
-  <!-- <a href="<%=link_to%>"><%=tree.title%> <%=tree.points%></a> -->
   <% end %>
 </ul>
 
-<hr>
 
-<%= link_to "New Tree", new_tree_path %>
+<% if current_user%>
+  <%= link_to "New Tree", new_tree_path %>
+<%end%>

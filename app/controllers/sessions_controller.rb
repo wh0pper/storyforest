@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+
+
   def create
     @user = User.authenticate(params[:email], params[:password])
     if @user
@@ -7,7 +9,7 @@ class SessionsController < ApplicationController
       redirect_to "/"
     else
       flash[:alert] = "There was a problem signing in. Please try again."
-      redirect_to signin_path
+      redirect_to signup_path
     end
   end
 
