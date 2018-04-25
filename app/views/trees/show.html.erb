@@ -4,10 +4,10 @@
 <%if @tree.branches.any?%>
   <p><%= link_to "Edit Tree", edit_tree_path(@tree) %> | Tree has branches (can't delete tree)</p>
 <%else%>
-<%end%>
-<p><%= link_to "Delete", tree_path(@tree),
+<p><%= link_to "Delete Tree", tree_path(@tree),
                          :data => {:confirm => "Are You sure?",
                                    :method => "Delete"} %></p>
+                                   <%end%>
                                    <%end%>
 <% if @tree.branches.any? %>
   <h4>Branches</h4>
