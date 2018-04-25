@@ -1,5 +1,5 @@
 class BranchesController < ApplicationController
-  before_action :authorize, only: [:new,:create,:destroy,:edit,:private]
+  # before_action :authorize, only: [:new,:create,:destroy,:edit,:private]
   def new
     @tree = Tree.find(params[:tree_id])
     @branch = @tree.branches.new

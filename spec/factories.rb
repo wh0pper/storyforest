@@ -1,4 +1,7 @@
 FactoryBot.define do
+  factory :user do
+    
+  end
   factory :tree do
 
     title("Paul")
