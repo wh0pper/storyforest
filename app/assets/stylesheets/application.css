@@ -39,3 +39,9 @@
 .btn {
   background-color: #82b794;
 }
+
+.logo {
+  height: 100%;
+  float: left;
+  fill: #f2dab6;
+}
