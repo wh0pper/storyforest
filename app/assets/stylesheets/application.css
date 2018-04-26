@@ -27,6 +27,15 @@
      width: 50px;
      overflow: hidden;
      text-align: center;
+     margin: 5px;
+ }
+
+ .nav-wrapper {
+   background-color: #435b4b;
  }
 
 .round-image-50 img { width: 100% }
+
+.btn {
+  background-color: #82b794;
+}
